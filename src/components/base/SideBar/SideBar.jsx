@@ -1,4 +1,4 @@
-export default function Nav() {
+export default function SideBar() {
   return (
     <aside>
       <a href=""></a>
