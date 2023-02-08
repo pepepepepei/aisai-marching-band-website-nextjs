@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.shareIcons {
+  text-align: center;
+}
+
+.notice {
+  font-size: 200%;
+  display: inline-block;
+  margin: 0.7em;
+}
+
+.notice:hover,
+.notice:focus {
+  opacity: 0.6;
+}
+
+.copyright {
+  text-align: center;
+}
