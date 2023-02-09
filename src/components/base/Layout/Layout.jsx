@@ -1,11 +1,11 @@
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
-import Nav from "../Nav/Nav";
+import SideBar from "../SideBar/SideBar";
 
 export default function Layout({ children }) {
   return (
     <>
-      <Nav />
+      <SideBar />
       <main>
         <Header />
         {children}

@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+:root {
+  --brand-color: 159, 22, 106;
+  --light-brand-color: 248, 201, 230;
+  --sub-color: 62, 120, 178;
+  --red: 224, 54, 22;
+  --black: 51, 51, 51;
+  --gray1: 184, 184, 184;
+  --gray2: 235, 235, 235;
+  --gray3: 245, 245, 245;
+  --white: 255, 255, 255;
+
+  --shippo-radius: 40px;
+  --shippo-width: .6px;
+  --shippo-bg-color: var(--brand-color);
+  --shippo-circle-color: rgba(var(--white), 0.5);
+  --shippo-pattern-img:
+    radial-gradient(circle at top left,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at top right,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at bottom left,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at bottom right,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at 50% 150%,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at 50% -50%,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at 150% 50%,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width))),
+    radial-gradient(circle at -50% 50%,
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) - var(--shippo-width)),
+      var(--shippo-circle-color) var(--shippo-radius),
+      rgba(var(--shippo-bg-color), 0) calc(var(--shippo-radius) + var(--shippo-width)));
+  --shippo-pattern-size: calc(var(--shippo-radius) * 1.732) var(--shippo-radius);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+a {
+  color: var(--black);
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.6;
+}
+
+section,
+address {
+  padding: 4rem 10%;
+}

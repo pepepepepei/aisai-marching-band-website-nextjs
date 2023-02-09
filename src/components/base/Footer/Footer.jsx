@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles.root}>
       <address className={styles.shareIcons}>
         <ExternalLink
           className={styles.notice}
@@ -66,9 +66,11 @@ export default function Footer() {
           </svg>
         </ExternalLink>
       </address>
-      <p className={styles.copyright}>
-        &copy; 2023 Aisai Marching Band BLOWING
-      </p>
+      <section>
+        <p className={styles.copyright}>
+          &copy; 2023 Aisai Marching Band BLOWING
+        </p>
+      </section>
     </footer>
   );
 }

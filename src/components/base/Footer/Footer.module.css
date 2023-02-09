@@ -1,12 +1,20 @@
 @charset "utf-8";
 
+.root {
+  color: rgb(var(--white));
+  --shippo-bg-color: var(--black);
+  background-color: rgb(var(--shippo-bg-color));
+  background-image: var(--shippo-pattern-img);
+  background-size: var(--shippo-pattern-size);
+}
+
 .shareIcons {
   text-align: center;
 }
 
 .notice {
-  font-size: 200%;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin: 0.7em;
 }
 
