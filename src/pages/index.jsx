@@ -1,3 +1,5 @@
+import Layout from "@/components/base/Layout/Layout";
+
 export default function Home() {
-  return <></>;
+  return <Layout title="トップ"></Layout>;
 }

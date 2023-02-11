@@ -1,0 +1,8 @@
+.root {
+  background: linear-gradient(rgba(var(--black), .4), rgba(var(--black), .4)), url("/hero.webp");
+  background-size: cover;
+  background-position: center center;
+  color: rgb(var(--white));
+  padding: 6rem 10%;
+  text-align: center;
+}

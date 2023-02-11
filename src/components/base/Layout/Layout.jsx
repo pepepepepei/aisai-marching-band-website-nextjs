@@ -3,12 +3,12 @@ import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import styles from "./Layout.module.css";
 
-export default function Layout({ children }) {
+export default function Layout({ title, children }) {
   return (
     <>
       <SideBar className={styles.sideBar} />
       <main className={styles.main}>
-        <Header />
+        <Header title={title} />
         {children}
         <Footer />
       </main>
