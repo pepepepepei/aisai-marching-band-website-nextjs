@@ -35,12 +35,7 @@ export default function SideBar() {
 
   return (
     <aside className={styles.root}>
-      <button
-        type="button"
-        title="一番上に戻る"
-        onClick={returnTop}
-        className={styles.logo}
-      >
+      <button type="button" title="一番上に戻る" onClick={returnTop} className={styles.logo}>
         <Image
           src="/apple-touch-icon-180x180.png"
           alt="Aisai Marching Band BLOWINGのロゴ"
@@ -77,7 +72,11 @@ export default function SideBar() {
                 <Link
                   href={item.href}
                   className={
-                    router.pathname.startsWith(item.href)
+                    (
+                      item.href === "/"
+                        ? router.pathname === item.href
+                        : router.pathname.startsWith(item.href)
+                    )
                       ? styles.menuContentListItemLinkCurrent
                       : styles.menuContentListItemLink
                   }
