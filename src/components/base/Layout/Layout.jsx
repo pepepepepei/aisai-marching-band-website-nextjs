@@ -9,8 +9,7 @@ export default function Layout({ title, children }) {
     <>
       <Head>
         <title>
-          {title}
-          {title ? "｜" : ""}
+          {title ? `${title}｜` : ""}
           Aisai Marching Band BLOWING
         </title>
       </Head>
