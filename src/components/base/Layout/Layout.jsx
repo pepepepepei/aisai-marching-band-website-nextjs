@@ -8,7 +8,7 @@ export default function Layout({ title, children }) {
   return (
     <>
       <Head>
-        <title>{title ? `${title}｜` : ""}Aisai Marching Band BLOWING</title>
+        <title>{title !== undefined ? `${title}｜` : ""}Aisai Marching Band BLOWING</title>
       </Head>
       <SideBar className={styles.sideBar} />
       <main className={styles.main}>
