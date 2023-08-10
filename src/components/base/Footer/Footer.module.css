@@ -6,6 +6,7 @@
   background-color: rgb(var(--shippo-bg-color));
   background-image: var(--shippo-pattern-img);
   background-size: var(--shippo-pattern-size);
+  margin-top: auto;
 }
 
 .shareIcons {

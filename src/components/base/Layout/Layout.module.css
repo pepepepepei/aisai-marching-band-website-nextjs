@@ -1,3 +1,6 @@
 .main {
   margin-right: 240px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
