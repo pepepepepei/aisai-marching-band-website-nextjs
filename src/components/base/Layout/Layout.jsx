@@ -4,7 +4,7 @@ import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import styles from "./Layout.module.css";
 
-export default function Layout({ title, children }) {
+export default function Layout({ title, isTopPage, children }) {
   return (
     <>
       <Head>
@@ -12,7 +12,7 @@ export default function Layout({ title, children }) {
       </Head>
       <SideBar className={styles.sideBar} />
       <main className={styles.main}>
-        <Header title={title} />
+        <Header title={title} isTopPage={isTopPage} />
         {children}
         <Footer />
       </main>

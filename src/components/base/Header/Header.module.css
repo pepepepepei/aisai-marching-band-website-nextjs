@@ -1,8 +1,54 @@
 .root {
-  background: linear-gradient(rgba(var(--black), .4), rgba(var(--black), .4)), url("/hero.webp");
+  background: linear-gradient(rgba(var(--black), 0.4), rgba(var(--black), 0.4)), url("/hero.webp");
   background-size: cover;
   background-position: center center;
   color: rgb(var(--white));
   padding: 6rem 10%;
   text-align: center;
+}
+
+.top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* タブレットとPC */
+  @media screen and (min-width: 641px), print {
+    aspect-ratio: 16 / 9;
+  }
+}
+
+.tagline {
+  /* PC */
+  @media only screen and (min-width: 961px) {
+    font-size: 4.61vw;
+  }
+}
+
+.scroll_arrow {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 1rem 7rem;
+  font-size: 0.7rem;
+  line-height: 1;
+  letter-spacing: 0.2rem;
+  writing-mode: vertical-lr;
+
+  /* タブレットとPC */
+  @media screen and (min-width: 641px), print {
+    right: 10%;
+  }
+}
+
+.scroll_arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  height: 7rem;
+  background: rgb(var(--white));
+  animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
 }
