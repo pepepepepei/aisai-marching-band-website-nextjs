@@ -1,4 +1,3 @@
-import returnTop from "@/utils/returnTop";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -35,7 +34,7 @@ export default function SideBar() {
 
   return (
     <aside className={styles.root}>
-      <button type="button" title="一番上に戻る" onClick={returnTop} className={styles.logo}>
+      <Link href="/" className={styles.logo}>
         <Image
           src="/apple-touch-icon-180x180.png"
           alt="Aisai Marching Band BLOWINGのロゴ"
@@ -46,7 +45,7 @@ export default function SideBar() {
           <span className={styles.logoAisaimb}>Aisai Marching Band</span>
           <span className={styles.logoBlowing}>BLOWING</span>
         </div>
-      </button>
+      </Link>
 
       {/* <button
         type="button"
