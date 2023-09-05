@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import styles from "./SideBar.module.css";
+import styles from "./SideBar.module.scss";
 
 export default function SideBar() {
   const router = useRouter();

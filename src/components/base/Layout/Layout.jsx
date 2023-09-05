@@ -2,7 +2,7 @@ import Head from "next/head";
 import Footer from "../Footer/Footer";
 import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
-import styles from "./Layout.module.css";
+import styles from "./Layout.module.scss";
 
 export default function Layout({ title, isTopPage, children }) {
   return (
