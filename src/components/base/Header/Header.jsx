@@ -10,7 +10,7 @@ export default function Header({ title, isTopPage }) {
         <br class="only-s" />
         目指して
       </h1>
-      <span class={styles.scroll_arrow}>SCROLL</span>
+      <span className={styles.scroll_arrow}>SCROLL</span>
     </header>
   ) : (
     <header className={styles.root}>
