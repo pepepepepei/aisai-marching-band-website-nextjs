@@ -1,0 +1,13 @@
+$breakpoints: (
+  "s": "(width < 640px)",
+  "st": "(width < 960px)",
+  "t": "(640px <= width < 960px)",
+  "tp": "(640px <= width)",
+  "p": "(960px <= width)",
+) !default;
+
+@mixin mq($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
