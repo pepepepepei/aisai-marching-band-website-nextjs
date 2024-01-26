@@ -1,59 +1,186 @@
-.root {
-  height: 100vh;
-  width: 240px;
-  position: fixed;
-  right: 0;
-  border-left: 1px solid rgb(var(--gray3));
+@import "@/styles/_index";
+
+@include mq(st) {
+  .menuBtn {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    height: 60px;
+    width: 60px;
+    z-index: 90;
+    transition: 0.4s;
+    background-color: rgb(var(--brand-color));
+    color: rgb(var(--white));
+
+    &.open {
+      background-color: rgb(var(--white));
+      color: rgb(var(--brand-color));
+    }
+  }
+
+  .menuBtnText {
+    font-size: 10px;
+  }
+
+  .menuBtnHamburgerLine {
+    display: block;
+    height: 2px;
+    width: 30px;
+    margin-block: 12px;
+    transition: 0.4s;
+    background-color: rgb(var(--white));
+    transition: 0.4s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: relative;
+      display: block;
+      height: inherit;
+      width: inherit;
+      background-color: inherit;
+      transition: 0.4s;
+    }
+
+    &::before {
+      top: -7px;
+    }
+
+    &::after {
+      top: 5px;
+    }
+
+    &.open {
+      background-color: rgb(var(--brand-color), 0);
+
+      &::before,
+      &::after {
+        background-color: rgb(var(--brand-color));
+      }
+
+      &::before {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  .menuContent {
+    height: 100%;
+    width: 80%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 1;
+    transition: 0.5s;
+    background-color: rgb(var(--shippo-bg-color));
+    background-image: var(--shippo-pattern-img);
+    background-size: var(--shippo-pattern-size);
+    overflow: auto;
+
+    &.open {
+      left: 20%;
+    }
+  }
+
+  .menuContentList {
+    margin: 60px 0 0 0;
+    padding: 24px;
+  }
+
+  .menuContentListItem {
+    margin: 0 0 1rem 0;
+    list-style: none;
+  }
+
+  .menuContentListItemLink {
+    display: block;
+    padding: 1rem 4rem 1rem 1rem;
+    position: relative;
+    background-color: rgba(var(--white), 0.85);
+    font-weight: bold;
+
+    &::before {
+      content: "";
+      width: 11px;
+      height: 11px;
+      border-top: solid 2px rgb(var(--black));
+      border-right: solid 2px rgb(var(--black));
+      transform: translateY(-50%) rotate(45deg);
+      position: absolute;
+      right: 2rem;
+      top: 50%;
+    }
+  }
 }
 
-.logo {
-  display: block;
-  padding: 40px 20px;
-  border-bottom: 1px solid rgb(var(--gray3));
-  width: 100%;
-  text-align: center;
-}
+@include mq(p) {
+  .root {
+    height: 100vh;
+    width: 240px;
+    position: fixed;
+    right: 0;
+    border-left: 1px solid rgb(var(--gray3));
+  }
 
-.logoText {
-  display: flex;
-  font-weight: bold;
-  text-align: center;
-  flex-direction: column;
-}
+  .logo {
+    display: block;
+    padding: 40px 20px;
+    border-bottom: 1px solid rgb(var(--gray3));
+    width: 100%;
+    text-align: center;
+  }
 
-.logoAisaimb {
-  font-size: 16px;
-  line-height: 16px;
-}
+  .logoText {
+    display: flex;
+    font-weight: bold;
+    text-align: center;
+    flex-direction: column;
+  }
 
-.logoBlowing {
-  font-size: 36px;
-  line-height: 36px;
-}
+  .logoAisaimb {
+    font-size: 16px;
+    line-height: 16px;
+  }
 
-.menuContentList {
-  margin: 40px 0;
-}
+  .logoBlowing {
+    font-size: 36px;
+    line-height: 36px;
+  }
 
-.menuContentListItem {
-  list-style: none;
-}
+  .menuBtn {
+    display: none;
+  }
 
-.menuContentListItemLink,
-.menuContentListItemLinkCurrent {
-  display: block;
-  padding: 16px 24px;
-  border-left: 8px solid rgba(var(--brand-color), 0);
-  font-weight: bold;
-  transition: all 0.4s;
-}
+  .menuContentList {
+    margin: 40px 0;
+  }
 
-.menuContentListItemLink:hover,
-.menuContentListItemLink:focus,
-.menuContentListItemLinkCurrent {
-  border-left: 8px solid rgb(var(--brand-color));
-  --shippo-bg-color: var(--gray3);
-  background-color: rgb(var(--shippo-bg-color));
-  background-image: var(--shippo-pattern-img);
-  background-size: var(--shippo-pattern-size);
+  .menuContentListItem {
+    list-style: none;
+  }
+
+  .menuContentListItemLink {
+    display: block;
+    padding: 16px 24px;
+    border-left: 8px solid rgba(var(--brand-color), 0);
+    font-weight: bold;
+    transition: 0.4s;
+
+    &:hover,
+    &:focus,
+    &.current {
+      border-left: 8px solid rgb(var(--brand-color));
+      --shippo-bg-color: var(--gray3);
+      background-color: rgb(var(--shippo-bg-color));
+      background-image: var(--shippo-pattern-img);
+      background-size: var(--shippo-pattern-size);
+    }
+  }
 }
