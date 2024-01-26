@@ -27,6 +27,10 @@
   .logoText {
     color: rgb(var(--black));
     font-size: 13px;
+
+    ::after {
+      content: " ";
+    }
   }
 
   .menuBtn {
