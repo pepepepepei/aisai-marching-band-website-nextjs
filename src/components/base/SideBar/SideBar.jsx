@@ -49,6 +49,7 @@ export default function SideBar() {
           alt="Aisai Marching Band BLOWINGのロゴ"
           width={80}
           height={80}
+          className={styles.logoImg}
         />
         <div className={styles.logoText}>
           <span className={styles.logoAisaimb}>Aisai Marching Band</span>

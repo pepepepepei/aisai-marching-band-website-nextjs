@@ -1,6 +1,14 @@
+@import "@/styles/_index";
+
 .main {
-  margin-right: 240px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
   min-height: 100dvh;
+
+  @include mq(st) {
+    margin-top: 60px;
+  }
+
+  @include mq(p) {
+    margin-right: 240px;
+  }
 }
