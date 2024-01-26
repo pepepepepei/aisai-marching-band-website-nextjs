@@ -170,10 +170,9 @@
   }
 
   .logoText {
-    display: flex;
+    display: grid;
     font-weight: bold;
     text-align: center;
-    flex-direction: column;
   }
 
   .logoAisaimb {
