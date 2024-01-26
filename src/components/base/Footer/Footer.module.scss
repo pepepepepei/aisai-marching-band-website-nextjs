@@ -15,11 +15,12 @@
   display: inline-flex;
   align-items: center;
   margin: 0.7em;
-}
+  color: rgb(var(--white));
 
-.notice:hover,
-.notice:focus {
-  opacity: 0.6;
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .copyright {

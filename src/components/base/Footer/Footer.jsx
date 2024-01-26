@@ -50,7 +50,7 @@ export default function Footer() {
         })}
       </address>
       <section>
-        <p className={styles.copyright}>&copy; 2023 Aisai Marching Band BLOWING</p>
+        <p className={styles.copyright}>&copy; 2024 Aisai Marching Band BLOWING</p>
       </section>
     </footer>
   );
