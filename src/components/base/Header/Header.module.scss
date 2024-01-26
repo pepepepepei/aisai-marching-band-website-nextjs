@@ -5,28 +5,40 @@
   background-size: cover;
   background-position: center center;
   color: rgb(var(--white));
-  padding: 6rem 10%;
-  text-align: center;
+  padding: 5rem 1.5rem;
+
+  @include mq(tp) {
+    padding: 6rem 10%;
+    text-align: center;
+  }
 }
 
 .top {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-content: center;
+  aspect-ratio: 1 / 1;
 
   @include mq(tp) {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 1.414 / 1;
   }
 }
 
 .tagline {
+  @include mq(s) {
+    font-size: 9.3vw;
+  }
+
+  @include mq(t) {
+    font-size: 6.1vw;
+  }
+
   @include mq(p) {
-    font-size: 4.61vw;
+    font-size: 4.6vw;
   }
 }
 
-.scroll_arrow {
+.scrollArrow {
   display: inline-block;
   position: absolute;
   bottom: 0;
@@ -35,21 +47,22 @@
   line-height: 1;
   letter-spacing: 0.2rem;
   writing-mode: vertical-lr;
+  right: 1.5rem;
 
   @include mq(tp) {
     right: 10%;
   }
-}
 
-.scroll_arrow::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  height: 7rem;
-  background: rgb(var(--white));
-  animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 7rem;
+    background: rgb(var(--white));
+    animation: sdl 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+  }
 }
 
 @keyframes sdl {
