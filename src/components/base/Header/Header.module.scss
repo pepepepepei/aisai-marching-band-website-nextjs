@@ -17,10 +17,13 @@
   position: relative;
   display: grid;
   place-content: center;
-  aspect-ratio: 1 / 1;
+
+  @include mq(s) {
+    aspect-ratio: 1 / 1;
+  }
 
   @include mq(tp) {
-    aspect-ratio: 1.414 / 1;
+    height: 75dvh;
   }
 }
 
