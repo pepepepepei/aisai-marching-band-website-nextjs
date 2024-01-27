@@ -71,16 +71,13 @@ export default function Home() {
         <h3>お問い合せ</h3>
         <p>
           当サイトへの、お問い合わせに関しては
-          <Link class="link-text" href="/contact">
-            こちら
-          </Link>
+          <Link href="/contact">こちら</Link>
           にお願いします。
         </p>
       </section>
 
       <section>
         <h2>免責事項</h2>
-
         <p>
           情報の提供の中止、欠陥などが原因で発生した損失や損害については、当サイトは一切責任を負いません。
           <br />

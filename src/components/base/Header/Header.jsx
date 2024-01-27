@@ -7,7 +7,7 @@ export default function Header({ title, isTopPage }) {
         地域に愛される
         <br />
         マーチングバンドを
-        <br class="only-s" />
+        <br className="only-s" />
         目指して
       </h1>
       <span className={styles.scrollArrow}>SCROLL</span>
